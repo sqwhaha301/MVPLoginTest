@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ceo.mvplogintest.view.MainActivity">
+
+    <TextView
+        android:text="用户名"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="66dp"
+        android:id="@+id/user_tv"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/user_tv"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="53dp"
+        android:id="@+id/username_et"
+        android:hint="请输入用户名"/>
+
+    <TextView
+        android:text="密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_et"
+        android:layout_toStartOf="@+id/username_et"
+        android:layout_marginTop="58dp"
+        android:id="@+id/pwd_tv"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:layout_below="@+id/username_et"
+        android:layout_alignStart="@+id/username_et"
+        android:layout_marginTop="45dp"
+        android:id="@+id/passwrod_et"/>
+    <ProgressBar
+    android:id="@+id/pb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/passwrod_et"
+    android:layout_centerHorizontal="true"
+    android:visibility="gone"
+    />
+    <Button
+        android:text="登陆"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwrod_et"
+        android:layout_alignStart="@+id/pwd_tv"
+        android:layout_marginTop="64dp"
+        android:id="@+id/btn_login"/>
+
+    <Button
+        android:text="清除"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_login"
+        android:layout_alignEnd="@+id/passwrod_et"
+        android:id="@+id/btn_clear"/>
+
+</RelativeLayout>
